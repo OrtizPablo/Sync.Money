@@ -8,13 +8,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class OtherViewController: UIViewController {
+    
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        initUI()
     }
 
+    private func initUI() {
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 150, height: 20))
+        view.addSubview(label)
+        label.center = view.center
+        label.text = "Default Screen"
+        label.textAlignment = .center
+    }
 
 }
 

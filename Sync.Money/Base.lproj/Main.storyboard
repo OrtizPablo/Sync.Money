@@ -1,24 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vlZ-Ts-Qxx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Card-->
+        <scene sceneID="gJE-eQ-dRa">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="xCl-26-igX" customClass="OtherViewController" customModule="Sync_Money" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a1z-de-lmG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="8C0-nE-YMd"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Card" image="icon_card" id="Ma7-XP-Tb4"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="271-Sz-wgf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="394" y="-515"/>
+        </scene>
+        <!--Accounts-->
+        <scene sceneID="49i-iH-xQz">
+            <objects>
+                <viewController id="ila-oF-R8Z" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aoe-Rb-ac8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="M7c-Ih-oxW"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Accounts" image="icon_account" id="ug8-Ue-Sk2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UPb-PM-kRJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-473" y="-779"/>
+        </scene>
+        <!--Market-->
+        <scene sceneID="ydF-oM-zM2">
+            <objects>
+                <viewController id="X4f-Gd-0JH" customClass="OtherViewController" customModule="Sync_Money" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZSi-e8-MIP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="N4r-UZ-M35"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Market" image="icon_market" id="C0O-NM-ydS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v0P-Bk-qgH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="393" y="179"/>
+        </scene>
+        <!--More-->
+        <scene sceneID="gFc-Gi-eoD">
+            <objects>
+                <viewController id="XUc-75-bhB" customClass="OtherViewController" customModule="Sync_Money" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sK1-UC-MTM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="vK3-nM-Ck3"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="More" image="icon_more" id="DoD-CU-Mbv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FEo-N8-9Pd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-474" y="848"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="k9Y-yV-wXj">
+            <objects>
+                <tabBarController id="vlZ-Ts-Qxx" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cxo-WH-i5X">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ila-oF-R8Z" kind="relationship" relationship="viewControllers" id="MQi-4E-Hyb"/>
+                        <segue destination="xCl-26-igX" kind="relationship" relationship="viewControllers" id="t8W-TX-IT3"/>
+                        <segue destination="X4f-Gd-0JH" kind="relationship" relationship="viewControllers" id="Upk-vT-f0d"/>
+                        <segue destination="XUc-75-bhB" kind="relationship" relationship="viewControllers" id="dDx-rc-AIo"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RL2-A1-GFN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1572" y="-16"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_account" width="32" height="26"/>
+        <image name="icon_card" width="32" height="22"/>
+        <image name="icon_market" width="27" height="23"/>
+        <image name="icon_more" width="23" height="23"/>
+    </resources>
 </document>
