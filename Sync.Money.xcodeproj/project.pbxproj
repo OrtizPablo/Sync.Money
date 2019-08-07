@@ -8,13 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		A71495E522F8819D00B4450F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71495E422F8819D00B4450F /* AppDelegate.swift */; };
-		A71495E722F8819D00B4450F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71495E622F8819D00B4450F /* ViewController.swift */; };
+		A71495E722F8819D00B4450F /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71495E622F8819D00B4450F /* OtherViewController.swift */; };
 		A71495EA22F8819D00B4450F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A71495E822F8819D00B4450F /* Main.storyboard */; };
 		A71495EC22F8819E00B4450F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A71495EB22F8819E00B4450F /* Assets.xcassets */; };
 		A71495EF22F8819E00B4450F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A71495ED22F8819E00B4450F /* LaunchScreen.storyboard */; };
 		A71495FA22F8819E00B4450F /* Sync_MoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71495F922F8819E00B4450F /* Sync_MoneyTests.swift */; };
 		A714960522F8819E00B4450F /* Sync_MoneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714960422F8819E00B4450F /* Sync_MoneyUITests.swift */; };
 		A714961322F8828A00B4450F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A714961222F8828A00B4450F /* README.md */; };
+		A714961522F8A0D700B4450F /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714961422F8A0D700B4450F /* AccountsViewController.swift */; };
+		A714961722F8AB4900B4450F /* MoneyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A714961622F8AB4900B4450F /* MoneyCell.xib */; };
+		A714961B22F8ABEB00B4450F /* MoneyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714961A22F8ABEB00B4450F /* MoneyCell.swift */; };
+		A714961F22F8AEC700B4450F /* AccountsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714961E22F8AEC700B4450F /* AccountsCell.swift */; };
+		A714962122F8AF1800B4450F /* AccountsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A714962022F8AF1800B4450F /* AccountsCell.xib */; };
+		A714962322F8DE0400B4450F /* AccountCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714962222F8DE0400B4450F /* AccountCollectionViewCell.swift */; };
+		A714962522F8DE2A00B4450F /* AccountCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A714962422F8DE2A00B4450F /* AccountCollectionViewCell.xib */; };
+		A718376022F9ED09005069A2 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = A718375F22F9ED09005069A2 /* Account.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +45,7 @@
 /* Begin PBXFileReference section */
 		A71495E122F8819D00B4450F /* Sync.Money.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sync.Money.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A71495E422F8819D00B4450F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A71495E622F8819D00B4450F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A71495E622F8819D00B4450F /* OtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
 		A71495E922F8819D00B4450F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A71495EB22F8819E00B4450F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A71495EE22F8819E00B4450F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +57,14 @@
 		A714960422F8819E00B4450F /* Sync_MoneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sync_MoneyUITests.swift; sourceTree = "<group>"; };
 		A714960622F8819E00B4450F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A714961222F8828A00B4450F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A714961422F8A0D700B4450F /* AccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
+		A714961622F8AB4900B4450F /* MoneyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoneyCell.xib; sourceTree = "<group>"; };
+		A714961A22F8ABEB00B4450F /* MoneyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyCell.swift; sourceTree = "<group>"; };
+		A714961E22F8AEC700B4450F /* AccountsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsCell.swift; sourceTree = "<group>"; };
+		A714962022F8AF1800B4450F /* AccountsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountsCell.xib; sourceTree = "<group>"; };
+		A714962222F8DE0400B4450F /* AccountCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCollectionViewCell.swift; sourceTree = "<group>"; };
+		A714962422F8DE2A00B4450F /* AccountCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountCollectionViewCell.xib; sourceTree = "<group>"; };
+		A718375F22F9ED09005069A2 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +117,13 @@
 			isa = PBXGroup;
 			children = (
 				A71495E422F8819D00B4450F /* AppDelegate.swift */,
-				A71495E622F8819D00B4450F /* ViewController.swift */,
 				A71495E822F8819D00B4450F /* Main.storyboard */,
-				A71495EB22F8819E00B4450F /* Assets.xcassets */,
 				A71495ED22F8819E00B4450F /* LaunchScreen.storyboard */,
 				A71495F022F8819E00B4450F /* Info.plist */,
+				A718376122F9ED0F005069A2 /* Models */,
+				A714961822F8AB8300B4450F /* Scenes */,
+				A714961922F8ABAE00B4450F /* Components */,
+				A71495EB22F8819E00B4450F /* Assets.xcassets */,
 			);
 			path = Sync.Money;
 			sourceTree = "<group>";
@@ -126,6 +144,52 @@
 				A714960622F8819E00B4450F /* Info.plist */,
 			);
 			path = Sync.MoneyUITests;
+			sourceTree = "<group>";
+		};
+		A714961822F8AB8300B4450F /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A714961422F8A0D700B4450F /* AccountsViewController.swift */,
+				A71495E622F8819D00B4450F /* OtherViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		A714961922F8ABAE00B4450F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A714961C22F8AE9600B4450F /* MoneyCell */,
+				A714961D22F8AEA900B4450F /* AccountsCell */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A714961C22F8AE9600B4450F /* MoneyCell */ = {
+			isa = PBXGroup;
+			children = (
+				A714961622F8AB4900B4450F /* MoneyCell.xib */,
+				A714961A22F8ABEB00B4450F /* MoneyCell.swift */,
+			);
+			path = MoneyCell;
+			sourceTree = "<group>";
+		};
+		A714961D22F8AEA900B4450F /* AccountsCell */ = {
+			isa = PBXGroup;
+			children = (
+				A714962022F8AF1800B4450F /* AccountsCell.xib */,
+				A714961E22F8AEC700B4450F /* AccountsCell.swift */,
+				A714962422F8DE2A00B4450F /* AccountCollectionViewCell.xib */,
+				A714962222F8DE0400B4450F /* AccountCollectionViewCell.swift */,
+			);
+			path = AccountsCell;
+			sourceTree = "<group>";
+		};
+		A718376122F9ED0F005069A2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A718375F22F9ED09005069A2 /* Account.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +297,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A71495EF22F8819E00B4450F /* LaunchScreen.storyboard in Resources */,
+				A714962122F8AF1800B4450F /* AccountsCell.xib in Resources */,
+				A714961722F8AB4900B4450F /* MoneyCell.xib in Resources */,
 				A71495EC22F8819E00B4450F /* Assets.xcassets in Resources */,
+				A714962522F8DE2A00B4450F /* AccountCollectionViewCell.xib in Resources */,
 				A714961322F8828A00B4450F /* README.md in Resources */,
 				A71495EA22F8819D00B4450F /* Main.storyboard in Resources */,
 			);
@@ -260,8 +327,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A71495E722F8819D00B4450F /* ViewController.swift in Sources */,
+				A71495E722F8819D00B4450F /* OtherViewController.swift in Sources */,
+				A714961522F8A0D700B4450F /* AccountsViewController.swift in Sources */,
+				A714962322F8DE0400B4450F /* AccountCollectionViewCell.swift in Sources */,
+				A714961B22F8ABEB00B4450F /* MoneyCell.swift in Sources */,
 				A71495E522F8819D00B4450F /* AppDelegate.swift in Sources */,
+				A714961F22F8AEC700B4450F /* AccountsCell.swift in Sources */,
+				A718376022F9ED09005069A2 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
