@@ -23,7 +23,7 @@
 		A714962322F8DE0400B4450F /* AccountCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714962222F8DE0400B4450F /* AccountCollectionViewCell.swift */; };
 		A714962522F8DE2A00B4450F /* AccountCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A714962422F8DE2A00B4450F /* AccountCollectionViewCell.xib */; };
 		A718376022F9ED09005069A2 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = A718375F22F9ED09005069A2 /* Account.swift */; };
-		A71D6AA522FD6DFC0094582C /* UIView+RoundCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71D6AA422FD6DFC0094582C /* UIView+RoundCorners.swift */; };
+		A71D6AA522FD6DFC0094582C /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71D6AA422FD6DFC0094582C /* UIView+Extension.swift */; };
 		A71D6AA922FD8B320094582C /* HelveticaNeueBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A71D6AA822FD8B320094582C /* HelveticaNeueBold.ttf */; };
 		A71D6AAB22FD90160094582C /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A71D6AAA22FD90160094582C /* SF-Pro-Display-Semibold.otf */; };
 		A71D6AAD22FD91640094582C /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A71D6AAC22FD91640094582C /* SF-Pro-Display-Bold.otf */; };
@@ -73,7 +73,7 @@
 		A714962222F8DE0400B4450F /* AccountCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCollectionViewCell.swift; sourceTree = "<group>"; };
 		A714962422F8DE2A00B4450F /* AccountCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountCollectionViewCell.xib; sourceTree = "<group>"; };
 		A718375F22F9ED09005069A2 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
-		A71D6AA422FD6DFC0094582C /* UIView+RoundCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+RoundCorners.swift"; sourceTree = "<group>"; };
+		A71D6AA422FD6DFC0094582C /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		A71D6AA822FD8B320094582C /* HelveticaNeueBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = HelveticaNeueBold.ttf; path = "../../../../../../Downloads/Sync.Money : iOS Challenge Task : v. 3/Fonts/HelveticaNeueBold.ttf"; sourceTree = "<group>"; };
 		A71D6AAA22FD90160094582C /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Semibold.otf"; path = "../../../../../../Downloads/Sync.Money : iOS Challenge Task : v. 3/Fonts/SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
 		A71D6AAC22FD91640094582C /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Bold.otf"; path = "../../../../../../Downloads/Sync.Money : iOS Challenge Task : v. 3/Fonts/SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
@@ -212,7 +212,7 @@
 		A71D6AA322FD6DDC0094582C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				A71D6AA422FD6DFC0094582C /* UIView+RoundCorners.swift */,
+				A71D6AA422FD6DFC0094582C /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -386,7 +386,7 @@
 				A714961522F8A0D700B4450F /* AccountsViewController.swift in Sources */,
 				A714962322F8DE0400B4450F /* AccountCollectionViewCell.swift in Sources */,
 				A714961B22F8ABEB00B4450F /* MoneyCell.swift in Sources */,
-				A71D6AA522FD6DFC0094582C /* UIView+RoundCorners.swift in Sources */,
+				A71D6AA522FD6DFC0094582C /* UIView+Extension.swift in Sources */,
 				A71495E522F8819D00B4450F /* AppDelegate.swift in Sources */,
 				A714961F22F8AEC700B4450F /* AccountsCell.swift in Sources */,
 				A718376022F9ED09005069A2 /* Account.swift in Sources */,

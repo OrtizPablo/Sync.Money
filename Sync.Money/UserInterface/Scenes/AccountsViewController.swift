@@ -63,14 +63,7 @@ final class AccountsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        for family: String in UIFont.familyNames
-        {
-            print(family)
-            for names: String in UIFont.fontNames(forFamilyName: family)
-            {
-                print("== \(names)")
-            }
-        }
+        
         initNavigationBar()
         initTableView()
         initMockData()
@@ -130,6 +123,10 @@ final class AccountsViewController: UIViewController {
         topView.roundCorners(cornerRadius: 30, corners: [.bottomLeft, .bottomRight])
     }
     
+    /// It converts the money String into the specific NSAttributedString
+    ///
+    /// - Parameter string: money string
+    /// - Parameter context: context to apply the correct font and size
     private func convertMoneyStringToAttributedString(string: String, context: MoneyFontContext) -> NSAttributedString {
         let attributedString = NSMutableAttributedString(string: string)
         attributedString.addAttribute(.font, value: UIFont(name: context.type, size: context.currency) ?? UIFont.systemFont(ofSize: context.currency, weight: .semibold), range: NSRange(location: 0, length: 1))
@@ -139,6 +136,9 @@ final class AccountsViewController: UIViewController {
         return attributedString
     }
     
+    /// It converts the account cell title String into the specific NSAttributedString
+    ///
+    /// - Parameter string: title string
     private func convertAccountCellTitleToAttributedString(string: String) -> NSAttributedString {
         let attributedString = NSMutableAttributedString(string: string)
         attributedString.addAttribute(.font, value: UIFont(name: "HelveticaNeue-Medium", size: 20) ?? UIFont.systemFont(ofSize: 20, weight: .medium), range: NSRange(location: 13, length: string.count - 13))

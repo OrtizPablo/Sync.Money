@@ -30,8 +30,8 @@ final class AccountCollectionViewCell: UICollectionViewCell {
     var accountType: AccountType = .sync {
         didSet {
             switch accountType {
-            case .sync: setGradientBackground(with: UIColor(red: 241/255.0, green: 241/255.0, blue: 241/255.0, alpha: 1.0))
-            case .bank: setGradientBackground(with: UIColor(red: 243/255.0, green: 249/255.0, blue: 246/255.0, alpha: 1.0))
+            case .sync: setGradientBackground(with: UIColor(red: 241/255.0, green: 241/255.0, blue: 241/255.0, alpha: 1.0), bottomColor: .white)
+            case .bank: setGradientBackground(with: UIColor(red: 243/255.0, green: 249/255.0, blue: 246/255.0, alpha: 1.0), bottomColor: .white)
             }
         }
     }
@@ -61,20 +61,5 @@ final class AccountCollectionViewCell: UICollectionViewCell {
     
     @objc private func didTapAddNewAccountButton() {
         flowDelegate?.didTapAddNewAccountButton()
-    }
-    
-    // MARK: - Private methods
-    
-    private func setGradientBackground(with topColor: UIColor) {
-        let topColor = topColor.cgColor
-        let bottomColor = UIColor.white.cgColor
-        
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [topColor, bottomColor]
-        gradientLayer.locations = [0.0, 1.0]
-        gradientLayer.frame = view.frame
-        gradientLayer.cornerRadius = 10
-        
-        view.layer.insertSublayer(gradientLayer, at:0)
     }
 }

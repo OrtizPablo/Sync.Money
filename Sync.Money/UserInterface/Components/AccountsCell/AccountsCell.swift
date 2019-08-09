@@ -16,6 +16,8 @@ final class AccountsCell: UITableViewCell {
     @IBOutlet weak var collectionView: AccountsCollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     
+    // MARK: - Lifecycle
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
