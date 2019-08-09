@@ -13,8 +13,48 @@ private let accountsCell = "AccountsCell"
 
 final class AccountsViewController: UIViewController {
     
+    private enum MoneyFontContext {
+        case moneyCell, accountCell
+        
+        var type: String {
+            switch self {
+            case .moneyCell: return "SFProDisplay-Semibold"
+            case .accountCell: return "SFProDisplay-Bold"
+            }
+        }
+        
+        var currency: CGFloat {
+            switch self {
+            case .moneyCell: return 30
+            case .accountCell: return 25
+            }
+        }
+        
+        var integer: CGFloat {
+            switch self {
+            case .moneyCell: return 38
+            case .accountCell: return 34
+            }
+        }
+        
+        var point: CGFloat {
+            switch self {
+            case .moneyCell: return 40
+            case .accountCell: return 32
+            }
+        }
+        
+        var decimals: CGFloat {
+            switch self {
+            case .moneyCell: return 34
+            case .accountCell: return 28
+            }
+        }
+    }
+    
     // MARK: - Properties
     
+    @IBOutlet private weak var topView: UIView!
     @IBOutlet private weak var tableView: UITableView!
     private var syncAccounts: [SyncAccount] = []
     private var bankAccounts: [BankAccount] = []
@@ -23,11 +63,26 @@ final class AccountsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        for family: String in UIFont.familyNames
+        {
+            print(family)
+            for names: String in UIFont.fontNames(forFamilyName: family)
+            {
+                print("== \(names)")
+            }
+        }
         initNavigationBar()
         initTableView()
         initMockData()
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        initTopView()
+    }
+    
+    // MARK: - Private functions
     
     private func initNavigationBar() {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -35,10 +90,23 @@ final class AccountsViewController: UIViewController {
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.view.backgroundColor = .clear
         
-        navigationItem.title = "All Accounts"
+        initNavigationTitle()
         let leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "icon_left_bar_button"), style: .plain, target: self, action: #selector(leftBarButtonItemTapped))
         leftBarButtonItem.tintColor = .black
         navigationItem.leftBarButtonItem = leftBarButtonItem
+    }
+    
+    private func initNavigationTitle() {
+        let label = UILabel()
+        let title = NSMutableAttributedString(
+            string: "All Accounts",
+            attributes: [
+                .foregroundColor: UIColor(red: 29/255, green: 29/255, blue: 29/255, alpha: 1.0),
+                .font: UIFont(name: "HelveticaNeue-Bold", size: 18) ?? UIFont.systemFont(ofSize: 18, weight: .semibold)
+            ])
+        
+        label.attributedText = title
+        navigationItem.titleView = label
     }
     
     private func initTableView() {
@@ -56,6 +124,25 @@ final class AccountsViewController: UIViewController {
         
         syncAccounts = [syncAccount]
         bankAccounts = [bankAccount]
+    }
+    
+    private func initTopView() {
+        topView.roundCorners(cornerRadius: 30, corners: [.bottomLeft, .bottomRight])
+    }
+    
+    private func convertMoneyStringToAttributedString(string: String, context: MoneyFontContext) -> NSAttributedString {
+        let attributedString = NSMutableAttributedString(string: string)
+        attributedString.addAttribute(.font, value: UIFont(name: context.type, size: context.currency) ?? UIFont.systemFont(ofSize: context.currency, weight: .semibold), range: NSRange(location: 0, length: 1))
+        attributedString.addAttribute(.font, value: UIFont(name: context.type, size: context.integer) ?? UIFont.systemFont(ofSize: context.integer, weight: .semibold), range: NSRange(location: 1, length: string.count - 4))
+        attributedString.addAttribute(.font, value: UIFont(name: context.type, size: context.point) ?? UIFont.systemFont(ofSize: context.point, weight: .semibold), range: NSRange(location: string.count-3, length: 1))
+        attributedString.addAttribute(.font, value: UIFont(name: context.type, size: context.decimals) ?? UIFont.systemFont(ofSize: context.decimals, weight: .semibold), range: NSRange(location: string.count-2, length: 2))
+        return attributedString
+    }
+    
+    private func convertAccountCellTitleToAttributedString(string: String) -> NSAttributedString {
+        let attributedString = NSMutableAttributedString(string: string)
+        attributedString.addAttribute(.font, value: UIFont(name: "HelveticaNeue-Medium", size: 20) ?? UIFont.systemFont(ofSize: 20, weight: .medium), range: NSRange(location: 13, length: string.count - 13))
+        return attributedString
     }
     
     // MARK: - Actions
@@ -79,7 +166,7 @@ extension AccountsViewController: UITableViewDataSource {
                 print("Unable to dequeue MoneyCell")
                 return UITableViewCell()
             }
-            cell.amountLabel.text = "1,720.21"
+            cell.amountLabel.attributedText = convertMoneyStringToAttributedString(string: "£1,720.21", context: .moneyCell)
             cell.currencyLabel.text = "British Pounds"
             return cell
         } else if indexPath.row == 1 || indexPath.row == 2 {
@@ -90,11 +177,11 @@ extension AccountsViewController: UITableViewDataSource {
             cell.selectionStyle = .none
             cell.collectionView.dataSource = self
             if indexPath.row == 1 {
-                cell.titleLabel.text = "sync.Accounts(0)"
+                cell.titleLabel.attributedText = convertAccountCellTitleToAttributedString(string: "sync.Accounts (0)")
                 cell.collectionView.accountType = .sync
                 cell.pageControl.numberOfPages = syncAccounts.count + 1
             } else {
-                cell.titleLabel.text = "Bank Accounts (0)"
+                cell.titleLabel.attributedText = convertAccountCellTitleToAttributedString(string: "Bank Accounts (0)")
                 cell.collectionView.accountType = .bank
                 cell.pageControl.numberOfPages = bankAccounts.count + 1
             }
@@ -128,7 +215,10 @@ extension AccountsViewController: UICollectionViewDataSource {
         }
         
         cell.flowDelegate = self
-        if case .sync? = collectionView.accountType {
+        if let accountType = collectionView.accountType {
+            cell.accountType = accountType
+        }
+        if case .sync = cell.accountType {
             cell.isGeneralCell = indexPath.row == syncAccounts.count ? true : false
             
             if cell.isGeneralCell {
@@ -140,7 +230,7 @@ extension AccountsViewController: UICollectionViewDataSource {
                 cell.currencyLabel.text = syncAccounts[indexPath.row].currency
                 cell.accountLabel.text = syncAccounts[indexPath.row].accountName
                 cell.bankDetailsLabel.text = String(syncAccounts[indexPath.row].accountNumber) + " | " + syncAccounts[indexPath.row].sortCode
-                cell.moneyLabel.text = "£ " + String(syncAccounts[indexPath.row].money)
+                cell.moneyLabel.attributedText = convertMoneyStringToAttributedString(string: "£" + String(syncAccounts[indexPath.row].money), context: .accountCell)
             }
         } else {
             cell.isGeneralCell = indexPath.row == bankAccounts.count ? true : false
@@ -154,7 +244,7 @@ extension AccountsViewController: UICollectionViewDataSource {
                 cell.currencyLabel.text = bankAccounts[indexPath.row].bankName
                 cell.accountLabel.text = bankAccounts[indexPath.row].accountName
                 cell.bankDetailsLabel.text = String(bankAccounts[indexPath.row].accountNumber) + " | " + bankAccounts[indexPath.row].sortCode
-                cell.moneyLabel.text = "£ " + String(bankAccounts[indexPath.row].money)
+                cell.moneyLabel.attributedText = convertMoneyStringToAttributedString(string: "£" + String(bankAccounts[indexPath.row].money), context: .accountCell)
             }
         }
         

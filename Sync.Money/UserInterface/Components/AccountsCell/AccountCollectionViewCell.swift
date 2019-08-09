@@ -23,7 +23,16 @@ final class AccountCollectionViewCell: UICollectionViewCell {
             bankDetailsLabel.isHidden = isGeneralCell
             moneyLabel.isHidden = isGeneralCell
             addNewAccountButton.isHidden = !isGeneralCell
-            logoImageViewWidthConstraint.constant = isGeneralCell ? 150.0 : 60
+            logoImageViewWidthConstraint.constant = isGeneralCell ? 171.0 : 58
+        }
+    }
+    
+    var accountType: AccountType = .sync {
+        didSet {
+            switch accountType {
+            case .sync: setGradientBackground(with: UIColor(red: 241/255.0, green: 241/255.0, blue: 241/255.0, alpha: 1.0))
+            case .bank: setGradientBackground(with: UIColor(red: 243/255.0, green: 249/255.0, blue: 246/255.0, alpha: 1.0))
+            }
         }
     }
     
@@ -41,11 +50,10 @@ final class AccountCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        setGradientBackground()
         view.layer.cornerRadius = 10
-        view.layer.borderWidth = 3
-        view.layer.borderColor = UIColor.red.cgColor
-        addNewAccountButton.layer.cornerRadius = 30
+        view.layer.borderWidth = 4
+        view.layer.borderColor = UIColor.white.cgColor
+        addNewAccountButton.layer.cornerRadius = 23
         addNewAccountButton.addTarget(self, action: #selector(didTapAddNewAccountButton), for: .touchUpInside)
     }
     
@@ -57,10 +65,9 @@ final class AccountCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Private methods
     
-    func setGradientBackground() {
-        // TODO: Modify the top and the bottom color
-        let topColor = UIColor(red: 255.0/255.0, green: 94.0/255.0, blue: 58.0/255.0, alpha: 1.0).cgColor
-        let bottomColor = UIColor(red: 255.0/255.0, green: 149.0/255.0, blue: 0.0/255.0, alpha: 1.0).cgColor
+    private func setGradientBackground(with topColor: UIColor) {
+        let topColor = topColor.cgColor
+        let bottomColor = UIColor.white.cgColor
         
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [topColor, bottomColor]

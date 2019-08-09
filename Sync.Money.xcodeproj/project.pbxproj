@@ -23,6 +23,14 @@
 		A714962322F8DE0400B4450F /* AccountCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714962222F8DE0400B4450F /* AccountCollectionViewCell.swift */; };
 		A714962522F8DE2A00B4450F /* AccountCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A714962422F8DE2A00B4450F /* AccountCollectionViewCell.xib */; };
 		A718376022F9ED09005069A2 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = A718375F22F9ED09005069A2 /* Account.swift */; };
+		A71D6AA522FD6DFC0094582C /* UIView+RoundCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71D6AA422FD6DFC0094582C /* UIView+RoundCorners.swift */; };
+		A71D6AA922FD8B320094582C /* HelveticaNeueBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A71D6AA822FD8B320094582C /* HelveticaNeueBold.ttf */; };
+		A71D6AAB22FD90160094582C /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A71D6AAA22FD90160094582C /* SF-Pro-Display-Semibold.otf */; };
+		A71D6AAD22FD91640094582C /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A71D6AAC22FD91640094582C /* SF-Pro-Display-Bold.otf */; };
+		A71D6AB122FD92B10094582C /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A71D6AB022FD92B10094582C /* SF-Pro-Text-Semibold.otf */; };
+		A71D6AB322FD93700094582C /* HelveticaNeueMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A71D6AB222FD93700094582C /* HelveticaNeueMedium.ttf */; };
+		A71D6AB522FD973E0094582C /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A71D6AB422FD973D0094582C /* SF-Pro-Text-Bold.otf */; };
+		A71D6AB722FD97B60094582C /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A71D6AB622FD97B60094582C /* SF-Pro-Text-Medium.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +73,14 @@
 		A714962222F8DE0400B4450F /* AccountCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCollectionViewCell.swift; sourceTree = "<group>"; };
 		A714962422F8DE2A00B4450F /* AccountCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountCollectionViewCell.xib; sourceTree = "<group>"; };
 		A718375F22F9ED09005069A2 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		A71D6AA422FD6DFC0094582C /* UIView+RoundCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+RoundCorners.swift"; sourceTree = "<group>"; };
+		A71D6AA822FD8B320094582C /* HelveticaNeueBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = HelveticaNeueBold.ttf; path = "../../../../../../Downloads/Sync.Money : iOS Challenge Task : v. 3/Fonts/HelveticaNeueBold.ttf"; sourceTree = "<group>"; };
+		A71D6AAA22FD90160094582C /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Semibold.otf"; path = "../../../../../../Downloads/Sync.Money : iOS Challenge Task : v. 3/Fonts/SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
+		A71D6AAC22FD91640094582C /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Bold.otf"; path = "../../../../../../Downloads/Sync.Money : iOS Challenge Task : v. 3/Fonts/SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		A71D6AB022FD92B10094582C /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Semibold.otf"; path = "../../../../../../Downloads/Sync.Money : iOS Challenge Task : v. 3/Fonts/SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
+		A71D6AB222FD93700094582C /* HelveticaNeueMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = HelveticaNeueMedium.ttf; path = "../../../../../../Downloads/Sync.Money : iOS Challenge Task : v. 3/Fonts/HelveticaNeueMedium.ttf"; sourceTree = "<group>"; };
+		A71D6AB422FD973D0094582C /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Bold.otf"; path = "../../../../../../Downloads/Sync.Money : iOS Challenge Task : v. 3/Fonts/SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
+		A71D6AB622FD97B60094582C /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Medium.otf"; path = "../../../../../../Downloads/Sync.Money : iOS Challenge Task : v. 3/Fonts/SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,12 +133,12 @@
 			isa = PBXGroup;
 			children = (
 				A71495E422F8819D00B4450F /* AppDelegate.swift */,
-				A71495E822F8819D00B4450F /* Main.storyboard */,
 				A71495ED22F8819E00B4450F /* LaunchScreen.storyboard */,
 				A71495F022F8819E00B4450F /* Info.plist */,
+				A71D6AA322FD6DDC0094582C /* Extensions */,
 				A718376122F9ED0F005069A2 /* Models */,
-				A714961822F8AB8300B4450F /* Scenes */,
-				A714961922F8ABAE00B4450F /* Components */,
+				A71D6AA622FD6E2B0094582C /* UserInterface */,
+				A71D6AA722FD8B000094582C /* Fonts */,
 				A71495EB22F8819E00B4450F /* Assets.xcassets */,
 			);
 			path = Sync.Money;
@@ -149,6 +165,7 @@
 		A714961822F8AB8300B4450F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A71495E822F8819D00B4450F /* Main.storyboard */,
 				A714961422F8A0D700B4450F /* AccountsViewController.swift */,
 				A71495E622F8819D00B4450F /* OtherViewController.swift */,
 			);
@@ -190,6 +207,37 @@
 				A718375F22F9ED09005069A2 /* Account.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A71D6AA322FD6DDC0094582C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A71D6AA422FD6DFC0094582C /* UIView+RoundCorners.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A71D6AA622FD6E2B0094582C /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				A714961922F8ABAE00B4450F /* Components */,
+				A714961822F8AB8300B4450F /* Scenes */,
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		A71D6AA722FD8B000094582C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A71D6AA822FD8B320094582C /* HelveticaNeueBold.ttf */,
+				A71D6AB222FD93700094582C /* HelveticaNeueMedium.ttf */,
+				A71D6AAA22FD90160094582C /* SF-Pro-Display-Semibold.otf */,
+				A71D6AAC22FD91640094582C /* SF-Pro-Display-Bold.otf */,
+				A71D6AB622FD97B60094582C /* SF-Pro-Text-Medium.otf */,
+				A71D6AB022FD92B10094582C /* SF-Pro-Text-Semibold.otf */,
+				A71D6AB422FD973D0094582C /* SF-Pro-Text-Bold.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,8 +348,15 @@
 				A714962122F8AF1800B4450F /* AccountsCell.xib in Resources */,
 				A714961722F8AB4900B4450F /* MoneyCell.xib in Resources */,
 				A71495EC22F8819E00B4450F /* Assets.xcassets in Resources */,
+				A71D6AA922FD8B320094582C /* HelveticaNeueBold.ttf in Resources */,
 				A714962522F8DE2A00B4450F /* AccountCollectionViewCell.xib in Resources */,
+				A71D6AB322FD93700094582C /* HelveticaNeueMedium.ttf in Resources */,
+				A71D6AB522FD973E0094582C /* SF-Pro-Text-Bold.otf in Resources */,
+				A71D6AAD22FD91640094582C /* SF-Pro-Display-Bold.otf in Resources */,
+				A71D6AAB22FD90160094582C /* SF-Pro-Display-Semibold.otf in Resources */,
+				A71D6AB122FD92B10094582C /* SF-Pro-Text-Semibold.otf in Resources */,
 				A714961322F8828A00B4450F /* README.md in Resources */,
+				A71D6AB722FD97B60094582C /* SF-Pro-Text-Medium.otf in Resources */,
 				A71495EA22F8819D00B4450F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,6 +386,7 @@
 				A714961522F8A0D700B4450F /* AccountsViewController.swift in Sources */,
 				A714962322F8DE0400B4450F /* AccountCollectionViewCell.swift in Sources */,
 				A714961B22F8ABEB00B4450F /* MoneyCell.swift in Sources */,
+				A71D6AA522FD6DFC0094582C /* UIView+RoundCorners.swift in Sources */,
 				A71495E522F8819D00B4450F /* AppDelegate.swift in Sources */,
 				A714961F22F8AEC700B4450F /* AccountsCell.swift in Sources */,
 				A718376022F9ED09005069A2 /* Account.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OtherViewController: UIViewController {
+final class OtherViewController: UIViewController {
     
     // MARK: - Lifecycle
 

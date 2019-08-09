@@ -50,6 +50,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o1a-ni-2cP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="342"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="342" id="aDV-lV-BEo"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S3O-DC-XcS">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -59,10 +66,13 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.96202258632599447" green="0.95737513421813936" blue="0.96667003843384947" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="M7c-Ih-oxW" firstAttribute="bottom" secondItem="S3O-DC-XcS" secondAttribute="bottom" id="BpK-c8-ITr"/>
+                            <constraint firstItem="o1a-ni-2cP" firstAttribute="top" secondItem="aoe-Rb-ac8" secondAttribute="top" id="UGc-DK-ELJ"/>
+                            <constraint firstItem="M7c-Ih-oxW" firstAttribute="trailing" secondItem="o1a-ni-2cP" secondAttribute="trailing" id="Vap-OY-OmE"/>
                             <constraint firstItem="S3O-DC-XcS" firstAttribute="leading" secondItem="M7c-Ih-oxW" secondAttribute="leading" id="Vps-dC-dt1"/>
+                            <constraint firstItem="o1a-ni-2cP" firstAttribute="leading" secondItem="M7c-Ih-oxW" secondAttribute="leading" id="cgk-ra-VDt"/>
                             <constraint firstItem="S3O-DC-XcS" firstAttribute="top" secondItem="M7c-Ih-oxW" secondAttribute="top" id="jzp-lP-3ot"/>
                             <constraint firstItem="M7c-Ih-oxW" firstAttribute="trailing" secondItem="S3O-DC-XcS" secondAttribute="trailing" id="zQu-Vk-VIh"/>
                         </constraints>
@@ -71,6 +81,7 @@
                     <navigationItem key="navigationItem" id="fYq-Tx-Fd3"/>
                     <connections>
                         <outlet property="tableView" destination="S3O-DC-XcS" id="2iL-Dz-bgd"/>
+                        <outlet property="topView" destination="o1a-ni-2cP" id="ezh-1Y-WYs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UPb-PM-kRJ" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -19,6 +19,9 @@ final class AccountsCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        backgroundColor = .clear
+        collectionView.backgroundColor = .clear
+        
         let accountCollectionViewCellNib = UINib(nibName: "AccountCollectionViewCell", bundle: nil)
         collectionView.register(accountCollectionViewCellNib, forCellWithReuseIdentifier: "AccountCollectionViewCell")
         collectionView.delegate = self
@@ -33,7 +36,7 @@ extension AccountsCell: UICollectionViewDelegate {}
 
 extension AccountsCell: UIScrollViewDelegate {
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
         pageControl.currentPage = Int(pageNumber)
     }
