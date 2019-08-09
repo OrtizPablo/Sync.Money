@@ -112,11 +112,30 @@ final class AccountsViewController: UIViewController {
     }
     
     private func initMockData() {
-        let syncAccount = SyncAccount(image: UIImage(named: "logo_uk_currency") ?? UIImage(), currency: "GBP", accountName: "sync.Account", accountNumber: 00175579, sortCode: "62-22-07", money: 1720.21)
-        let bankAccount = BankAccount(image: UIImage(named: "logo_lloyds") ?? UIImage(), bankName: "Lloyds Bank", accountName: "Classic Account", accountNumber: 00175580, sortCode: "62-22-08", money: 2752.27)
-        
-        syncAccounts = [syncAccount]
-        bankAccounts = [bankAccount]
+        getSyncAccountsFromJson()
+        getBankAccountsFromJson()
+    }
+    
+    private func getSyncAccountsFromJson() {
+        if let path = Bundle.main.path(forResource: "SyncAccounts", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                syncAccounts = try JSONDecoder().decode([SyncAccount].self, from: data)
+            } catch {
+                print("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    private func getBankAccountsFromJson() {
+        if let path = Bundle.main.path(forResource: "BankAccounts", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                bankAccounts = try JSONDecoder().decode([BankAccount].self, from: data)
+            } catch {
+                print("Error: \(error.localizedDescription)")
+            }
+        }
     }
     
     private func initTopView() {

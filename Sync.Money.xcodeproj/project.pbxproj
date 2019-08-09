@@ -31,6 +31,8 @@
 		A71D6AB322FD93700094582C /* HelveticaNeueMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A71D6AB222FD93700094582C /* HelveticaNeueMedium.ttf */; };
 		A71D6AB522FD973E0094582C /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A71D6AB422FD973D0094582C /* SF-Pro-Text-Bold.otf */; };
 		A71D6AB722FD97B60094582C /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A71D6AB622FD97B60094582C /* SF-Pro-Text-Medium.otf */; };
+		A71D6ABA22FDAE160094582C /* SyncAccounts.json in Resources */ = {isa = PBXBuildFile; fileRef = A71D6AB922FDAE160094582C /* SyncAccounts.json */; };
+		A71D6ABC22FDAE2B0094582C /* BankAccounts.json in Resources */ = {isa = PBXBuildFile; fileRef = A71D6ABB22FDAE2B0094582C /* BankAccounts.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		A71D6AB222FD93700094582C /* HelveticaNeueMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = HelveticaNeueMedium.ttf; path = "../../../../../../Downloads/Sync.Money : iOS Challenge Task : v. 3/Fonts/HelveticaNeueMedium.ttf"; sourceTree = "<group>"; };
 		A71D6AB422FD973D0094582C /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Bold.otf"; path = "../../../../../../Downloads/Sync.Money : iOS Challenge Task : v. 3/Fonts/SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
 		A71D6AB622FD97B60094582C /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Medium.otf"; path = "../../../../../../Downloads/Sync.Money : iOS Challenge Task : v. 3/Fonts/SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
+		A71D6AB922FDAE160094582C /* SyncAccounts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SyncAccounts.json; sourceTree = "<group>"; };
+		A71D6ABB22FDAE2B0094582C /* BankAccounts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BankAccounts.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,7 @@
 				A718376122F9ED0F005069A2 /* Models */,
 				A71D6AA622FD6E2B0094582C /* UserInterface */,
 				A71D6AA722FD8B000094582C /* Fonts */,
+				A71D6AB822FDACEA0094582C /* JSON */,
 				A71495EB22F8819E00B4450F /* Assets.xcassets */,
 			);
 			path = Sync.Money;
@@ -238,6 +243,15 @@
 				A71D6AB422FD973D0094582C /* SF-Pro-Text-Bold.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A71D6AB822FDACEA0094582C /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				A71D6AB922FDAE160094582C /* SyncAccounts.json */,
+				A71D6ABB22FDAE2B0094582C /* BankAccounts.json */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,6 +363,7 @@
 				A714961722F8AB4900B4450F /* MoneyCell.xib in Resources */,
 				A71495EC22F8819E00B4450F /* Assets.xcassets in Resources */,
 				A71D6AA922FD8B320094582C /* HelveticaNeueBold.ttf in Resources */,
+				A71D6ABC22FDAE2B0094582C /* BankAccounts.json in Resources */,
 				A714962522F8DE2A00B4450F /* AccountCollectionViewCell.xib in Resources */,
 				A71D6AB322FD93700094582C /* HelveticaNeueMedium.ttf in Resources */,
 				A71D6AB522FD973E0094582C /* SF-Pro-Text-Bold.otf in Resources */,
@@ -358,6 +373,7 @@
 				A714961322F8828A00B4450F /* README.md in Resources */,
 				A71D6AB722FD97B60094582C /* SF-Pro-Text-Medium.otf in Resources */,
 				A71495EA22F8819D00B4450F /* Main.storyboard in Resources */,
+				A71D6ABA22FDAE160094582C /* SyncAccounts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
