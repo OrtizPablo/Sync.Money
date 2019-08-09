@@ -33,6 +33,7 @@
 		A71D6AB722FD97B60094582C /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A71D6AB622FD97B60094582C /* SF-Pro-Text-Medium.otf */; };
 		A71D6ABA22FDAE160094582C /* SyncAccounts.json in Resources */ = {isa = PBXBuildFile; fileRef = A71D6AB922FDAE160094582C /* SyncAccounts.json */; };
 		A71D6ABC22FDAE2B0094582C /* BankAccounts.json in Resources */ = {isa = PBXBuildFile; fileRef = A71D6ABB22FDAE2B0094582C /* BankAccounts.json */; };
+		A71D6ABE22FDC9430094582C /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71D6ABD22FDC9430094582C /* APIRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		A71D6AB622FD97B60094582C /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Medium.otf"; path = "../../../../../../Downloads/Sync.Money : iOS Challenge Task : v. 3/Fonts/SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
 		A71D6AB922FDAE160094582C /* SyncAccounts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SyncAccounts.json; sourceTree = "<group>"; };
 		A71D6ABB22FDAE2B0094582C /* BankAccounts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BankAccounts.json; sourceTree = "<group>"; };
+		A71D6ABD22FDC9430094582C /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				A71495E422F8819D00B4450F /* AppDelegate.swift */,
+				A71D6ABD22FDC9430094582C /* APIRouter.swift */,
 				A71495ED22F8819E00B4450F /* LaunchScreen.storyboard */,
 				A71495F022F8819E00B4450F /* Info.plist */,
 				A71D6AA322FD6DDC0094582C /* Extensions */,
@@ -399,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A71495E722F8819D00B4450F /* OtherViewController.swift in Sources */,
+				A71D6ABE22FDC9430094582C /* APIRouter.swift in Sources */,
 				A714961522F8A0D700B4450F /* AccountsViewController.swift in Sources */,
 				A714962322F8DE0400B4450F /* AccountCollectionViewCell.swift in Sources */,
 				A714961B22F8ABEB00B4450F /* MoneyCell.swift in Sources */,

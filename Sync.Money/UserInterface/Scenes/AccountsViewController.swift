@@ -56,6 +56,7 @@ final class AccountsViewController: UIViewController {
     
     @IBOutlet private weak var topView: UIView!
     @IBOutlet private weak var tableView: UITableView!
+    private let apiRouter = APIRouter()
     private var syncAccounts: [SyncAccount] = []
     private var bankAccounts: [BankAccount] = []
     
@@ -112,30 +113,8 @@ final class AccountsViewController: UIViewController {
     }
     
     private func initMockData() {
-        getSyncAccountsFromJson()
-        getBankAccountsFromJson()
-    }
-    
-    private func getSyncAccountsFromJson() {
-        if let path = Bundle.main.path(forResource: "SyncAccounts", ofType: "json") {
-            do {
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                syncAccounts = try JSONDecoder().decode([SyncAccount].self, from: data)
-            } catch {
-                print("Error: \(error.localizedDescription)")
-            }
-        }
-    }
-    
-    private func getBankAccountsFromJson() {
-        if let path = Bundle.main.path(forResource: "BankAccounts", ofType: "json") {
-            do {
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                bankAccounts = try JSONDecoder().decode([BankAccount].self, from: data)
-            } catch {
-                print("Error: \(error.localizedDescription)")
-            }
-        }
+        syncAccounts = apiRouter.loadSyncAccounts()
+        bankAccounts = apiRouter.loadBankAccounts()
     }
     
     private func initTopView() {
